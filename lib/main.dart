@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:notes_app/core/router/router.dart';
 
 void main() {
-  runApp(const NoteApp());
+  runApp(
+    ProviderScope(child: const NoteApp()),
+  );
 }
 
 class NoteApp extends StatelessWidget {
