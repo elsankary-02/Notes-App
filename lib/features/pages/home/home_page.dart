@@ -11,7 +11,7 @@ class HomePage extends ConsumerStatefulWidget {
 }
 
 class _HomePageState extends ConsumerState<HomePage> {
-  int _counter = 0;
+  int _counter = 25;
 
   void _incrementCounter() {
     setState(() {
