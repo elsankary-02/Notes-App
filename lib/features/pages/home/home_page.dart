@@ -13,12 +13,6 @@ class HomePage extends ConsumerStatefulWidget {
 class _HomePageState extends ConsumerState<HomePage> {
   int _counter = 25;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +35,11 @@ class _HomePageState extends ConsumerState<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          setState(() {
+            _counter ++;
+          });
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
