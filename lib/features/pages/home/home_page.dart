@@ -11,7 +11,7 @@ class HomePage extends ConsumerStatefulWidget {
 }
 
 class _HomePageState extends ConsumerState<HomePage> {
-  int _counter = 25;
+  int _counter = 15;
 
   @override
   Widget build(BuildContext context) {
