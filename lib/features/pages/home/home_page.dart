@@ -17,8 +17,6 @@ class HomePage extends ConsumerStatefulWidget {
 class _HomePageState extends ConsumerState<HomePage> {
   @override
   Widget build(BuildContext context) {
-    // final w = MediaQuery.of(context).size.width;
-    // final h = MediaQuery.of(context).size.height;
     final textTheme = Theme.of(context).textTheme;
     final itemProvider = ref.watch(detailsNoteProvider);
     return Scaffold(
