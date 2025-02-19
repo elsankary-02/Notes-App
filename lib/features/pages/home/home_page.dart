@@ -1,5 +1,6 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
+import 'package:notes_app/core/constant/color_manger.dart';
 import 'package:notes_app/features/pages/home/widget/search_widget.dart';
 
 @RoutePage()
@@ -17,13 +18,19 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('Note App'),
         actions: [
+          // Search Icon Widget
           SearchWidget(),
         ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   backgroundColor: ColorManger.kBlue,
-      // ),
+      // Floating Action Button
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: ColorManger.kBlue,
+        child: Icon(
+          Icons.add,
+          color: ColorManger.kPlusColor,
+        ),
+      ),
       // body: Column(),
     );
   }
