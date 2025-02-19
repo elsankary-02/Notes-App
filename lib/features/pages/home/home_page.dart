@@ -1,34 +1,52 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:notes_app/features/pages/home/widget/details_note_widget.dart';
 import 'package:notes_app/features/pages/home/widget/floating_action_button_widget.dart';
 import 'package:notes_app/features/pages/home/widget/search_widget.dart';
+import 'package:notes_app/features/providers/details_note_provider.dart';
 
 @RoutePage()
-class HomePage extends StatefulWidget {
+class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  ConsumerState<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends ConsumerState<HomePage> {
   @override
   Widget build(BuildContext context) {
+    // final w = MediaQuery.of(context).size.width;
+    // final h = MediaQuery.of(context).size.height;
     final textTheme = Theme.of(context).textTheme;
+    final itemProvider = ref.watch(detailsNoteProvider);
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Note App',
-          style: textTheme.headlineMedium,
+        // FloatingActionButtonWidget
+        floatingActionButton: FloatingActionButtonWidget(),
+        appBar: AppBar(
+          forceMaterialTransparency: true,
+          title: Text(
+            'Note App',
+            style:
+                textTheme.headlineMedium!.copyWith(fontWeight: FontWeight.w600),
+          ),
+          actions: [
+            // SearchIconWidget
+            SearchWidget(),
+          ],
         ),
-        actions: [
-          // SearchIconWidget
-          SearchWidget(),
-        ],
-      ),
-      // FloatingActionButtonWidget
-      floatingActionButton: FloatingActionButtonWidget(),
-      body: Column(),
-    );
+        body: ListView.builder(
+          physics: BouncingScrollPhysics(),
+          padding: EdgeInsetsDirectional.symmetric(
+            horizontal: 15,
+            vertical: 15,
+          ),
+          itemCount: itemProvider.length,
+          itemBuilder: (context, index) {
+            // DetailsNoteWidget
+            return DetailsNoteWidget(index);
+          },
+        ));
   }
 }
