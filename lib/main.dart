@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:notes_app/core/constant/string_manger.dart';
 import 'package:notes_app/core/router/router.dart';
 
 void main() {
@@ -14,7 +15,10 @@ class NoteApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      theme: ThemeData(brightness: Brightness.dark),
+      theme: ThemeData(
+        fontFamily: StringManger.kPoppins,
+        brightness: Brightness.dark,
+      ),
       routerConfig: router.config(),
       debugShowCheckedModeBanner: false,
     );
