@@ -33,6 +33,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_riverpod: ^2.6.1
+  font_awesome_flutter: ^10.8.0
 
 dev_dependencies:
   auto_route_generator: ^9.3.1

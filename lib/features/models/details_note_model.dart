@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class DetailsNoteModel {
+class NoteItemsModel {
   final String titel;
   final String description;
   final Icon delete;
   final String time;
 
-  DetailsNoteModel(
+  NoteItemsModel(
       {required this.titel,
       required this.description,
       required this.delete,

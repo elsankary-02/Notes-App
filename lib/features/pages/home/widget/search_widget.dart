@@ -10,8 +10,7 @@ class SearchWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(right: 10),
-      height: 50,
-      width: 50,
+      padding: EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: ColorManger.kContanierBackGroundColor,
         borderRadius: BorderRadius.circular(16),
