@@ -44,6 +44,7 @@ class NoteItemsWidget extends ConsumerWidget {
               icon: itemProvider[index].delete,
             ),
           ),
+          // time
           Padding(
             padding: const EdgeInsets.only(top: 24, right: 24),
             child: Text(

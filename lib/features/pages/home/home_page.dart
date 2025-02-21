@@ -1,7 +1,7 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:notes_app/features/pages/home/widget/floating_action_button_widget.dart';
+import 'package:notes_app/features/pages/home/widget/floating_action_widget.dart';
 import 'package:notes_app/features/pages/home/widget/note_items_widget.dart';
 import 'package:notes_app/features/pages/home/widget/search_widget.dart';
 import 'package:notes_app/features/providers/note_provider.dart';
@@ -21,7 +21,7 @@ class _HomePageState extends ConsumerState<HomePage> {
     final itemProvider = ref.watch(noteItemsProvider);
     return Scaffold(
       // FloatingActionButtonWidget
-      floatingActionButton: FloatingActionButtonWidget(),
+      floatingActionButton: FloatingActionWidget(),
       appBar: AppBar(
         forceMaterialTransparency: true,
         title: Text(
