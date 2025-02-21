@@ -3,9 +3,7 @@ import 'package:notes_app/core/components/custom_botton.dart';
 import 'package:notes_app/core/components/custom_text_form_field.dart';
 
 class BottomSheetWidget extends StatefulWidget {
-  const BottomSheetWidget({
-    super.key,
-  });
+  const BottomSheetWidget({super.key});
 
   @override
   State<BottomSheetWidget> createState() => _BottomSheetWidgetState();
