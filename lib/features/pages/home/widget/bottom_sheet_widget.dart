@@ -36,7 +36,7 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
             ),
             // Content
             CustomTextFormField(
-              contentPadding: EdgeInsets.only(top: 40, bottom: 40, left: 10),
+              maxLines: 4,
               hintText: 'Content',
               validator: (value) {
                 if (value!.isEmpty) {

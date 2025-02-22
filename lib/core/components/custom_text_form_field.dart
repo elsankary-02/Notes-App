@@ -3,13 +3,10 @@ import 'package:notes_app/core/constant/color_manger.dart';
 
 class CustomTextFormField extends StatefulWidget {
   const CustomTextFormField(
-      {super.key,
-      required this.hintText,
-      required this.validator,
-      this.contentPadding});
+      {super.key, required this.hintText, this.validator, this.maxLines = 1});
   final String hintText;
   final String Function(String? value)? validator;
-  final EdgeInsetsGeometry? contentPadding;
+  final int? maxLines;
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
 }
@@ -19,24 +16,24 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return TextFormField(
+      maxLines: widget.maxLines,
       scrollPadding: EdgeInsets.all(22),
       validator: widget.validator,
       decoration: InputDecoration(
-        contentPadding: widget.contentPadding,
         hintText: widget.hintText,
         hintStyle: textTheme.titleMedium!.copyWith(
-          color: ColorManger.kBlue,
+          color: Colors.grey,
         ),
-        border: outLineInputBorder(),
-        enabledBorder: outLineInputBorder(),
-        focusedBorder: outLineInputBorder(),
+        border: outLineInputBorder(color: Colors.white),
+        enabledBorder: outLineInputBorder(color: Colors.white),
+        focusedBorder: outLineInputBorder(color: ColorManger.kBlue),
       ),
     );
   }
 
-  OutlineInputBorder outLineInputBorder() {
+  OutlineInputBorder outLineInputBorder({required Color color}) {
     return OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.white),
+      borderSide: BorderSide(color: color),
       borderRadius: BorderRadius.circular(8),
     );
   }
