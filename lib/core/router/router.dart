@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 import 'package:notes_app/features/pages/edit_notes/edit_note_page.dart';
 import 'package:notes_app/features/pages/home/home_page.dart';
 

@@ -12,25 +12,43 @@ part of 'router.dart';
 
 /// generated route for
 /// [EditNotePage]
-class EditNoteRoute extends PageRouteInfo<void> {
-  const EditNoteRoute({List<PageRouteInfo>? children})
-    : super(EditNoteRoute.name, initialChildren: children);
+class EditNoteRoute extends PageRouteInfo<EditNoteRouteArgs> {
+  EditNoteRoute({Key? key, required int index, List<PageRouteInfo>? children})
+      : super(
+          EditNoteRoute.name,
+          args: EditNoteRouteArgs(key: key, index: index),
+          initialChildren: children,
+        );
 
   static const String name = 'EditNoteRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const EditNotePage();
+      final args = data.argsAs<EditNoteRouteArgs>();
+      return EditNotePage(key: args.key, index: args.index);
     },
   );
+}
+
+class EditNoteRouteArgs {
+  const EditNoteRouteArgs({this.key, required this.index});
+
+  final Key? key;
+
+  final int index;
+
+  @override
+  String toString() {
+    return 'EditNoteRouteArgs{key: $key, index: $index}';
+  }
 }
 
 /// generated route for
 /// [HomePage]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
-    : super(HomeRoute.name, initialChildren: children);
+      : super(HomeRoute.name, initialChildren: children);
 
   static const String name = 'HomeRoute';
 
