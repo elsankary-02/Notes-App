@@ -20,20 +20,19 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 15),
           children: [
+            SizedBox(height: 30),
             // Titel
-            Padding(
-              padding: const EdgeInsets.only(top: 30, bottom: 20),
-              child: CustomTextFormField(
-                hintText: 'Titel',
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'empty';
-                  } else {
-                    return 'valid';
-                  }
-                },
-              ),
+            CustomTextFormField(
+              hintText: 'Titel',
+              validator: (value) {
+                if (value!.isEmpty) {
+                  return 'empty';
+                } else {
+                  return 'valid';
+                }
+              },
             ),
+            SizedBox(height: 20),
             // Content
             CustomTextFormField(
               maxLines: 4,

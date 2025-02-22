@@ -16,6 +16,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return TextFormField(
+      cursorColor: ColorManger.kBlue,
       maxLines: widget.maxLines,
       scrollPadding: EdgeInsets.all(22),
       validator: widget.validator,
