@@ -30,7 +30,9 @@ class _HomePageState extends ConsumerState<HomePage> {
         ),
         actions: [
           // SearchIconWidget
-          SearchWidget(),
+          SearchWidget(
+            icon: Icons.search,
+          ),
         ],
       ),
       body: ListView.builder(
