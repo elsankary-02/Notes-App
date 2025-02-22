@@ -5,9 +5,11 @@ class NoteItemsModel {
   final String description;
   final Icon delete;
   final String time;
+  final int number;
 
   NoteItemsModel(
-      {required this.titel,
+      {required this.number,
+      required this.titel,
       required this.description,
       required this.delete,
       required this.time});
