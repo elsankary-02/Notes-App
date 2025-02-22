@@ -12,7 +12,7 @@ List<NoteItemsModel> item = [
       FontAwesomeIcons.trash,
       color: Colors.black,
     ),
-    time: 'NOV 21,2025',
+    date: 'NOV 21,2025',
   ),
   NoteItemsModel(
     number: 2,
@@ -22,7 +22,7 @@ List<NoteItemsModel> item = [
       FontAwesomeIcons.trash,
       color: Colors.black,
     ),
-    time: 'NOV 21,2025',
+    date: 'NOV 21,2025',
   ),
   NoteItemsModel(
     number: 3,
@@ -32,7 +32,7 @@ List<NoteItemsModel> item = [
       FontAwesomeIcons.trash,
       color: Colors.black,
     ),
-    time: 'NOV 21,2025',
+    date: 'NOV 21,2025',
   ),
   NoteItemsModel(
     number: 4,
@@ -42,7 +42,7 @@ List<NoteItemsModel> item = [
       FontAwesomeIcons.trash,
       color: Colors.black,
     ),
-    time: 'NOV 21,2025',
+    date: 'NOV 21,2025',
   ),
   NoteItemsModel(
     number: 5,
@@ -52,7 +52,7 @@ List<NoteItemsModel> item = [
       FontAwesomeIcons.trash,
       color: Colors.black,
     ),
-    time: 'NOV 21,2025',
+    date: 'NOV 21,2025',
   ),
   NoteItemsModel(
     number: 6,
@@ -62,7 +62,7 @@ List<NoteItemsModel> item = [
       FontAwesomeIcons.trash,
       color: Colors.black,
     ),
-    time: 'NOV 21,2025',
+    date: 'NOV 21,2025',
   ),
   NoteItemsModel(
     number: 7,
@@ -72,7 +72,7 @@ List<NoteItemsModel> item = [
       FontAwesomeIcons.trash,
       color: Colors.black,
     ),
-    time: 'NOV 21,2025',
+    date: 'NOV 21,2025',
   ),
   NoteItemsModel(
     number: 8,
@@ -82,7 +82,7 @@ List<NoteItemsModel> item = [
       FontAwesomeIcons.trash,
       color: Colors.black,
     ),
-    time: 'NOV 21,2025',
+    date: 'NOV 21,2025',
   ),
 ];
 

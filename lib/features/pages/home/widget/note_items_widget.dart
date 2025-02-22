@@ -54,7 +54,7 @@ class NoteItemsWidget extends ConsumerWidget {
             Padding(
               padding: const EdgeInsets.only(top: 24, right: 24),
               child: Text(
-                itemProvider[index].time,
+                itemProvider[index].date,
                 style: textTheme.titleSmall!.copyWith(
                   color: Colors.black38,
                 ),

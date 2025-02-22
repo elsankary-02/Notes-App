@@ -4,7 +4,7 @@ class NoteItemsModel {
   final String titel;
   final String description;
   final Icon delete;
-  final String time;
+  final String date;
   final int number;
 
   NoteItemsModel(
@@ -12,5 +12,5 @@ class NoteItemsModel {
       required this.titel,
       required this.description,
       required this.delete,
-      required this.time});
+      required this.date});
 }
