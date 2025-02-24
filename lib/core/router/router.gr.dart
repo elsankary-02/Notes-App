@@ -1,4 +1,3 @@
-// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -13,10 +12,16 @@ part of 'router.dart';
 /// generated route for
 /// [EditNotePage]
 class EditNoteRoute extends PageRouteInfo<EditNoteRouteArgs> {
-  EditNoteRoute({Key? key, required int index, List<PageRouteInfo>? children})
-      : super(
+  EditNoteRoute({
+    Key? key,
+    required int index,
+    List<PageRouteInfo>? children,
+  }) : super(
           EditNoteRoute.name,
-          args: EditNoteRouteArgs(key: key, index: index),
+          args: EditNoteRouteArgs(
+            key: key,
+            index: index,
+          ),
           initialChildren: children,
         );
 
@@ -26,13 +31,19 @@ class EditNoteRoute extends PageRouteInfo<EditNoteRouteArgs> {
     name,
     builder: (data) {
       final args = data.argsAs<EditNoteRouteArgs>();
-      return EditNotePage(key: args.key, index: args.index);
+      return EditNotePage(
+        key: args.key,
+        index: args.index,
+      );
     },
   );
 }
 
 class EditNoteRouteArgs {
-  const EditNoteRouteArgs({this.key, required this.index});
+  const EditNoteRouteArgs({
+    this.key,
+    required this.index,
+  });
 
   final Key? key;
 
@@ -48,7 +59,10 @@ class EditNoteRouteArgs {
 /// [HomePage]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
-      : super(HomeRoute.name, initialChildren: children);
+      : super(
+          HomeRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'HomeRoute';
 
