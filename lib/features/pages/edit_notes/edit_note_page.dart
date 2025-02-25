@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:notes_app/core/components/custom_text_form_field.dart';
 import 'package:notes_app/features/pages/home/widget/search_widget.dart';
-import 'package:notes_app/features/providers/note_provider.dart';
 
 @RoutePage()
 class EditNotePage extends ConsumerWidget {
@@ -12,7 +11,7 @@ class EditNotePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final textTheme = Theme.of(context).textTheme;
-    final itemProvider = ref.watch(noteItemsProvider);
+    // final itemProvider = ref.watch(noteItemsProvider);
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -37,10 +36,9 @@ class EditNotePage extends ConsumerWidget {
           SizedBox(height: 20),
           // content
           CustomTextFormField(
+            contentPadding: EdgeInsets.only(left: 10, top: 120),
             hintText: 'content',
           ),
-          SizedBox(height: 30),
-          Text(itemProvider[index].number.toString())
         ],
       ),
     );

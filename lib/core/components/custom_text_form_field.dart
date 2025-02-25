@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/core/constant/color_manger.dart';
 
-class CustomTextFormField extends StatefulWidget {
+class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField(
       {super.key, required this.hintText, this.onSaved, this.contentPadding});
   final String hintText;
@@ -9,15 +9,10 @@ class CustomTextFormField extends StatefulWidget {
   final void Function(String? value)? onSaved;
 
   @override
-  State<CustomTextFormField> createState() => _CustomTextFormFieldState();
-}
-
-class _CustomTextFormFieldState extends State<CustomTextFormField> {
-  @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return TextFormField(
-      onSaved: widget.onSaved,
+      onSaved: onSaved,
       cursorColor: ColorManger.kBlue,
       scrollPadding: EdgeInsets.all(22),
       validator: (value) {
@@ -28,8 +23,8 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         }
       },
       decoration: InputDecoration(
-        contentPadding: widget.contentPadding,
-        hintText: widget.hintText,
+        contentPadding: contentPadding,
+        hintText: hintText,
         hintStyle: textTheme.titleMedium!.copyWith(
           color: Colors.grey,
         ),
