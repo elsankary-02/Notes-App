@@ -38,7 +38,6 @@ class EditNotePage extends ConsumerWidget {
           // content
           CustomTextFormField(
             hintText: 'content',
-            maxLines: 4,
           ),
           SizedBox(height: 30),
           Text(itemProvider[index].number.toString())

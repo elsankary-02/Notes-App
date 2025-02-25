@@ -16,7 +16,7 @@ class _CustomButtonState extends State<CustomButton> {
       onTap: widget.onTap,
       child: Container(
         padding: EdgeInsets.symmetric(vertical: 15),
-        margin: EdgeInsets.only(top: 190, bottom: 20),
+        margin: EdgeInsets.only(top: 120, bottom: 20),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8), color: ColorManger.kBlue),
         child: Center(

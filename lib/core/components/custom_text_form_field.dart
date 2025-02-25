@@ -3,10 +3,11 @@ import 'package:notes_app/core/constant/color_manger.dart';
 
 class CustomTextFormField extends StatefulWidget {
   const CustomTextFormField(
-      {super.key, required this.hintText, this.validator, this.maxLines = 1});
+      {super.key, required this.hintText, this.onSaved, this.contentPadding});
   final String hintText;
-  final String Function(String? value)? validator;
-  final int? maxLines;
+  final EdgeInsetsGeometry? contentPadding;
+  final void Function(String? value)? onSaved;
+
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
 }
@@ -16,11 +17,18 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return TextFormField(
+      onSaved: widget.onSaved,
       cursorColor: ColorManger.kBlue,
-      maxLines: widget.maxLines,
       scrollPadding: EdgeInsets.all(22),
-      validator: widget.validator,
+      validator: (value) {
+        if (value?.isEmpty ?? true) {
+          return 'field is requaired';
+        } else {
+          return null;
+        }
+      },
       decoration: InputDecoration(
+        contentPadding: widget.contentPadding,
         hintText: widget.hintText,
         hintStyle: textTheme.titleMedium!.copyWith(
           color: Colors.grey,
