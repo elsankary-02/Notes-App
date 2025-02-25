@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:notes_app/core/constant/string_manger.dart';
 import 'package:notes_app/core/router/router.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+  await Hive.openBox(StringManger.kNoteBox);
   runApp(
     ProviderScope(child: const NoteApp()),
   );
