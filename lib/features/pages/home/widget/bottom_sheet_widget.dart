@@ -11,7 +11,7 @@ class BottomSheetWidget extends StatefulWidget {
 
 class _BottomSheetWidgetState extends State<BottomSheetWidget> {
   final GlobalKey<FormState> formKey = GlobalKey();
-  // AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   String? title;
   String? content;
   @override
@@ -20,7 +20,7 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
       decoration: BoxDecoration(),
       child: Form(
         key: formKey,
-        // autovalidateMode: autovalidateMode,
+        autovalidateMode: autovalidateMode,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 15),
           child: SingleChildScrollView(
@@ -47,12 +47,12 @@ class _BottomSheetWidgetState extends State<BottomSheetWidget> {
                 ),
                 CustomButton(
                   onTap: () {
-                    // if (formKey.currentState!.validate()) {
-                    //   formKey.currentState!.save();
-                    // } else {
-                    //   autovalidateMode = AutovalidateMode.always;
-                    //   setState(() {});
-                    // }
+                    if (formKey.currentState!.validate()) {
+                      formKey.currentState!.save();
+                    } else {
+                      autovalidateMode = AutovalidateMode.always;
+                      setState(() {});
+                    }
                   },
                 ),
               ],
